@@ -1,7 +1,13 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import LookupBar from "./components/LookupBar.vue";
+import ResultBox from "./components/ResultBox.vue";
 </script>
 
 <template>
-  <HelloWorld />
+  <div class="app-wrapper">
+    <div class="glass-card app-card">
+      <LookupBar />
+      <ResultBox />
+    </div>
+  </div>
 </template>

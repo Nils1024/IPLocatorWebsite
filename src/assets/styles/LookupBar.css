@@ -1,0 +1,49 @@
+.lookup-bar {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.lookup-select,
+.lookup-input,
+.lookup-button {
+    background: var(--input-bg);
+    border: 1px solid var(--input-border);
+    border-radius: var(--radius);
+    color: var(--text);
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+    outline: none;
+    transition: border-color 0.15s
+}
+
+.lookup-select:focus,
+.lookup-input:focus {
+    border-color: var(--input-border-focus);
+}
+
+.lookup-input {
+    flex: 1;
+}
+
+.lookup-input::placeholder {
+    color: var(--text-muted);
+}
+
+.lookup-select {
+    cursor: pointer;
+}
+
+.lookup-button {
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.lookup-button:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.lookup-button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
