@@ -1,0 +1,17 @@
+.result-box {
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--card-border);
+    padding-top: 1.5rem;
+}
+
+.result-json {
+
+}
+
+.result-state {
+
+}
+
+.result-error {
+    color: #f87171;
+}

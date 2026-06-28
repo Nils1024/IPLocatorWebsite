@@ -22,3 +22,24 @@ body {
     color: var(--text);
     font-family: system-ui, sans-serif;
 }
+
+.app-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.app-card {
+    width: 100%;
+    max-width: 640px;
+}
+
+.glass-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: var(--card-blur);
+    border-radius: var(--radius);
+    padding: 2rem;
+}
