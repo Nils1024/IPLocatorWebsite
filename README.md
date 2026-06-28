@@ -1,5 +1,38 @@
-# Vue 3 + TypeScript + Vite
+# IP Locator Website
+Website for my IP Locator API
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Demo
+Try it on: https://ip.nilsb.tech/
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## How to deploy it using Nginx?
+1. Build the website
+```bash
+npm run install
+npm run build
+```
+2. Upload the files from /dist/ to your server into a folder like /var/www/iplocatorwebsite/
+3. Open the nginx config
+4. Add something like this:
+```
+server {
+    server_name yourdomain.com
+
+    root /var/www/iplocatorwebsite;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+}
+```
+5. Add your server to certbot:
+```bash
+certbot --nginx -d yourdomain.com
+```
+6. Reload nginx:
+```bash
+systemctl reload nginx
+```
+
+## AI Declaration
+I used the JetBrains autocomplete for the website.
