@@ -31,7 +31,12 @@
 }
 
 .lookup-select {
+    background: #2a2a2a;
     cursor: pointer;
+}
+
+.lookup-select option {
+    color: var(--text);
 }
 
 .lookup-button {
